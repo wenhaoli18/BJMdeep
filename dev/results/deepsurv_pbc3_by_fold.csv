@@ -1,0 +1,121 @@
+"fold","model","landmark","measure","cause","value","n_at_risk","n_cases"
+1,"cox_basic",1,"AUC","Event",0.932692307692308,62,10
+1,"cox_basic",1,"Brier score","Event",0.0809723298730402,62,10
+1,"cox_basic",3,"AUC","Event",0.94507259411538,52,8
+1,"cox_basic",3,"Brier score","Event",0.0586219137567688,52,8
+1,"cox_basic",5,"AUC","Event",0.692001897898206,43,4
+1,"cox_basic",5,"Brier score","Event",0.125892605406555,43,4
+1,"cox_basic",7,"AUC","Event",0.948350071736011,29,2
+1,"cox_basic",7,"Brier score","Event",0.116590966280346,29,2
+1,"cox_rich",1,"AUC","Event",0.923076923076923,62,10
+1,"cox_rich",1,"Brier score","Event",0.0798323901552322,62,10
+1,"cox_rich",3,"AUC","Event",0.959527174611332,52,8
+1,"cox_rich",3,"Brier score","Event",0.0585337314151876,52,8
+1,"cox_rich",5,"AUC","Event",0.725343352868006,43,4
+1,"cox_rich",5,"Brier score","Event",0.120509198658971,43,4
+1,"cox_rich",7,"AUC","Event",0.974175035868006,29,2
+1,"cox_rich",7,"Brier score","Event",0.115454456210775,29,2
+1,"deepsurv",1,"AUC","Event",0.926923076923077,62,10
+1,"deepsurv",1,"Brier score","Event",0.0796288233736038,62,10
+1,"deepsurv",3,"AUC","Event",0.956636258512142,52,8
+1,"deepsurv",3,"Brier score","Event",0.0576432814244861,52,8
+1,"deepsurv",5,"AUC","Event",0.725343352868006,43,4
+1,"deepsurv",5,"Brier score","Event",0.122317674959889,43,4
+1,"deepsurv",7,"AUC","Event",0.948350071736011,29,2
+1,"deepsurv",7,"Brier score","Event",0.115767665623222,29,2
+2,"cox_basic",1,"AUC","Event",0.875,57,9
+2,"cox_basic",1,"Brier score","Event",0.0930773743303543,57,9
+2,"cox_basic",3,"AUC","Event",0.815873819163293,48,7
+2,"cox_basic",3,"Brier score","Event",0.118010260054745,48,7
+2,"cox_basic",5,"AUC","Event",0.949143998816661,39,8
+2,"cox_basic",5,"Brier score","Event",0.0883306656853404,39,8
+2,"cox_basic",7,"AUC","Event",0.814207650273224,23,4
+2,"cox_basic",7,"Brier score","Event",0.139203574027296,23,4
+2,"cox_rich",1,"AUC","Event",0.858796296296296,57,9
+2,"cox_rich",1,"Brier score","Event",0.115213606088835,57,9
+2,"cox_rich",3,"AUC","Event",0.848852901484481,48,7
+2,"cox_rich",3,"Brier score","Event",0.113618327368855,48,7
+2,"cox_rich",5,"AUC","Event",0.944006489240499,39,8
+2,"cox_rich",5,"Brier score","Event",0.0925507476485983,39,8
+2,"cox_rich",7,"AUC","Event",0.812841530054645,23,4
+2,"cox_rich",7,"Brier score","Event",0.141433471697908,23,4
+2,"deepsurv",1,"AUC","Event",0.861111111111111,57,9
+2,"deepsurv",1,"Brier score","Event",0.114863078801415,57,9
+2,"deepsurv",3,"AUC","Event",0.834092442645074,48,7
+2,"deepsurv",3,"Brier score","Event",0.113778656588885,48,7
+2,"deepsurv",5,"AUC","Event",0.905099967091161,39,8
+2,"deepsurv",5,"Brier score","Event",0.102763698442062,39,8
+2,"deepsurv",7,"AUC","Event",0.793715846994535,23,4
+2,"deepsurv",7,"Brier score","Event",0.142780312648122,23,4
+3,"cox_basic",1,"AUC","Event",0.825531914893617,57,10
+3,"cox_basic",1,"Brier score","Event",0.110445526062483,57,10
+3,"cox_basic",3,"AUC","Event",0.934174022698613,47,7
+3,"cox_basic",3,"Brier score","Event",0.0813451563749299,47,7
+3,"cox_basic",5,"AUC","Event",0.64421717911305,39,5
+3,"cox_basic",5,"Brier score","Event",0.141572750047747,39,5
+3,"cox_basic",7,"AUC","Event",0.659449866903283,27,6
+3,"cox_basic",7,"Brier score","Event",0.197672271177573,27,6
+3,"cox_rich",1,"AUC","Event",0.838297872340426,57,10
+3,"cox_rich",1,"Brier score","Event",0.130840359879082,57,10
+3,"cox_rich",3,"AUC","Event",0.945102984447247,47,7
+3,"cox_rich",3,"Brier score","Event",0.0800464452243214,47,7
+3,"cox_rich",5,"AUC","Event",0.651278763268505,39,5
+3,"cox_rich",5,"Brier score","Event",0.135827046610143,39,5
+3,"cox_rich",7,"AUC","Event",0.659449866903283,27,6
+3,"cox_rich",7,"Brier score","Event",0.200185107729349,27,6
+3,"deepsurv",1,"AUC","Event",0.836170212765957,57,10
+3,"deepsurv",1,"Brier score","Event",0.124477308476808,57,10
+3,"deepsurv",3,"AUC","Event",0.937788986969315,47,7
+3,"deepsurv",3,"Brier score","Event",0.0783201488780556,47,7
+3,"deepsurv",5,"AUC","Event",0.651278763268505,39,5
+3,"deepsurv",5,"Brier score","Event",0.136007559953591,39,5
+3,"deepsurv",7,"AUC","Event",0.659449866903283,27,6
+3,"deepsurv",7,"Brier score","Event",0.199941576604611,27,6
+4,"cox_basic",1,"AUC","Event",0.860294117647059,59,8
+4,"cox_basic",1,"Brier score","Event",0.0994103465948869,59,8
+4,"cox_basic",3,"AUC","Event",0.809109730848861,51,8
+4,"cox_basic",3,"Brier score","Event",0.10417804118492,51,8
+4,"cox_basic",5,"AUC","Event",0.8753425568108,42,10
+4,"cox_basic",5,"Brier score","Event",0.119736412827266,42,10
+4,"cox_basic",7,"AUC","Event",1,26,3
+4,"cox_basic",7,"Brier score","Event",0.110819540360035,26,3
+4,"cox_rich",1,"AUC","Event",0.887254901960784,59,8
+4,"cox_rich",1,"Brier score","Event",0.0908080945324131,59,8
+4,"cox_rich",3,"AUC","Event",0.802967563837129,51,8
+4,"cox_rich",3,"Brier score","Event",0.105625747634262,51,8
+4,"cox_rich",5,"AUC","Event",0.853014802079966,42,10
+4,"cox_rich",5,"Brier score","Event",0.132067040518299,42,10
+4,"cox_rich",7,"AUC","Event",0.857142857142857,26,3
+4,"cox_rich",7,"Brier score","Event",0.140423158135451,26,3
+4,"deepsurv",1,"AUC","Event",0.887254901960784,59,8
+4,"deepsurv",1,"Brier score","Event",0.0873505395287691,59,8
+4,"deepsurv",3,"AUC","Event",0.805935127674258,51,8
+4,"deepsurv",3,"Brier score","Event",0.104638945869073,51,8
+4,"deepsurv",5,"AUC","Event",0.856795390476996,42,10
+4,"deepsurv",5,"Brier score","Event",0.126015038687222,42,10
+4,"deepsurv",7,"AUC","Event",0.877033652774682,26,3
+4,"deepsurv",7,"Brier score","Event",0.129877184838224,26,3
+5,"cox_basic",1,"AUC","Event",0.941489361702128,55,8
+5,"cox_basic",1,"Brier score","Event",0.0758947001144593,55,8
+5,"cox_basic",3,"AUC","Event",0.853620198447785,47,6
+5,"cox_basic",3,"Brier score","Event",0.0915995309695143,47,6
+5,"cox_basic",5,"AUC","Event",0.872819577621659,39,6
+5,"cox_basic",5,"Brier score","Event",0.111443127599816,39,6
+5,"cox_basic",7,"AUC","Event",0.969369369369369,24,2
+5,"cox_basic",7,"Brier score","Event",0.119815354151382,24,2
+5,"cox_rich",1,"AUC","Event",0.936170212765957,55,8
+5,"cox_rich",1,"Brier score","Event",0.0721851651590181,55,8
+5,"cox_rich",3,"AUC","Event",0.849395814913056,47,6
+5,"cox_rich",3,"Brier score","Event",0.092051137701499,47,6
+5,"cox_rich",5,"AUC","Event",0.860511396578055,39,6
+5,"cox_rich",5,"Brier score","Event",0.110453215196512,39,6
+5,"cox_rich",7,"AUC","Event",0.938738738738739,24,2
+5,"cox_rich",7,"Brier score","Event",0.117970764821678,24,2
+5,"deepsurv",1,"AUC","Event",0.936170212765957,55,8
+5,"deepsurv",1,"Brier score","Event",0.073157244520114,55,8
+5,"deepsurv",3,"AUC","Event",0.857942823460065,47,6
+5,"deepsurv",3,"Brier score","Event",0.0917933009376332,47,6
+5,"deepsurv",5,"AUC","Event",0.853104266561844,39,6
+5,"deepsurv",5,"Brier score","Event",0.11335313481751,39,6
+5,"deepsurv",7,"AUC","Event",0.969369369369369,24,2
+5,"deepsurv",7,"Brier score","Event",0.121531226854472,24,2

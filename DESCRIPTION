@@ -1,0 +1,18 @@
+Package: BJMdeep
+Title: Neural (DeepSurv) Survival Sub-Models for the Backward Joint Model
+Version: 0.0.1
+Authors@R: person("Wenhao", "Li", email = "wenhaoli.jlu@gmail.com", role = c("aut", "cre"))
+Description: Experimental extension of the 'BJM' package. Fits the marginal
+    survival sub-model of the backward joint model as a proportional hazards
+    model whose log relative hazard is a neural network of the baseline
+    covariates (DeepSurv; Katzman et al., 2018), and returns it in the form
+    'BJM' expects, so dynamic prediction works unchanged. Implemented in base
+    R, without a deep-learning library.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = FALSE)
+RoxygenNote: 7.3.2
+Depends: R (>= 3.5.0)
+Imports: BJM (>= 0.3.0), survival, stats
+Suggests: testthat (>= 3.0.0), ggplot2
+Config/testthat/edition: 3
