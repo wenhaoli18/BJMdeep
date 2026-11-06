@@ -84,6 +84,72 @@ fold has only 3–9 events per landmark window. A network is more likely to pay
 off with large cohorts, high-dimensional baseline data (omics, imaging or text
 embeddings), or strongly non-linear covariate effects.
 
+## When does it help? Simulation study
+
+`dev/sim/` generates data from the backward joint model's own factorization.
+The longitudinal sub-model is therefore correctly specified, and only the
+survival sub-model differs:
+
+- `T | X` is Weibull proportional hazards with log relative hazard `g(x)`,
+  where sd(`g`) = 1.
+- `Y | T` is a linear mixed model, `Y = 1 + 0.1 s + alpha * 0.5 (s - T) + b0 + b1 s + e`.
+
+The design varies three things:
+
+- **Scenario:**
+  - `linear`: `g` is linear in 5 covariates, so Cox is correctly specified.
+  - `nonlinear`: `g` has a square, two interactions and a sine term.
+  - `highdim`: the same non-linear `g`, plus 15 noise covariates.
+- **Training size:** 500 or 2000.
+- **Biomarker strength:** `alpha` = 0.1 (weak) or 0.5 (strong).
+
+Each cell has 20 replicates. Each replicate is scored on a held-out cohort of
+500. Three survival sub-models are compared:
+
+- `cox`: linear Cox on all covariates.
+- `deepsurv`: 32-16 ELU network, ensemble of 5.
+- `oracle`: Cox on the true `g(x)`, an upper bound.
+
+Below is the held-out AUC of the joint-model dynamic predictions, averaged over
+landmarks 1, 3 and 5 with a 2-year window. Standard errors of the paired
+DeepSurv − Cox difference are in parentheses. "Gap closed" is
+(DeepSurv − Cox) / (oracle − Cox).
+
+| scenario | biomarker | n | Cox | DeepSurv | oracle | DeepSurv − Cox | gap closed |
+|---|---|---|---|---|---|---|---|
+| linear | weak | 500 | .777 | .776 | .779 | −.001 (.001) | – |
+| linear | weak | 2000 | .784 | .783 | .784 | −.000 (.001) | – |
+| linear | strong | 2000 | .913 | .913 | .913 | −.000 (.000) | – |
+| nonlinear | weak | 500 | .683 | .736 | .755 | **+.052** (.003) | 73% |
+| nonlinear | weak | 2000 | .701 | .758 | .768 | **+.057** (.004) | 84% |
+| nonlinear | strong | 2000 | .916 | .920 | .921 | +.004 (.001) | 75% |
+| highdim | weak | 500 | .678 | .689 | .765 | +.012 (.002) | 13% |
+| highdim | weak | 2000 | .697 | .739 | .777 | **+.042** (.003) | 53% |
+| highdim | strong | 2000 | .918 | .922 | .925 | +.003 (.000) | 47% |
+
+The full tables, including the survival sub-model's own C-index and the Brier
+score, are in `dev/sim/sim_summary.csv`. The figures are `dev/sim/sim_auc.png`
+and `dev/sim/sim_cindex.png`.
+
+What the simulation shows:
+
+1. **When Cox is correctly specified, DeepSurv costs essentially nothing.**
+   The AUC differences are ≤ 0.001.
+2. **With non-linear covariate effects and a weak biomarker, it helps a
+   lot.** AUC rises by 0.05–0.06, closing 73–84% of the gap to the oracle. The
+   Brier score improves by about 0.01.
+3. **High-dimensional inputs need data.** With 15 noise covariates, DeepSurv
+   closes only 13% of the gap at n = 500, but 53% at n = 2000.
+4. **A strong biomarker makes the survival sub-model nearly irrelevant.** Even
+   the oracle gains at most 0.007 AUC over Cox. Dynamic prediction then runs
+   mainly through `f(Y | T)`. This matches what pbc3 showed.
+
+So DeepSurv is worth using when the baseline covariates carry real, possibly
+non-linear signal; when the biomarkers say relatively little about the event;
+and when there are a few thousand subjects. Each cell's C-index is identical
+across `alpha` because a replicate's seed fixes `X` and `T`, and `alpha`
+changes only `Y`.
+
 ## Limitations
 
 - Right-censored outcomes only. No `strata()` and no interval censoring.

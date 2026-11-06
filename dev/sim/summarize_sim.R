@@ -55,7 +55,7 @@ for (m in c("C-index", "AUC")) {
                   width = 0.2, position = position_dodge(0.4)) +
     facet_grid(biomarker ~ scenario) +
     scale_colour_manual(values = c(cox = "#1f77b4", deepsurv = "#d62728", oracle = "grey40")) +
-    labs(x = "Training sample size", y = sprintf("Held-out %s (mean ± 2 SE)", m), colour = NULL,
+    labs(x = "Training sample size", y = sprintf("Held-out %s (mean +/- 2 SE)", m), colour = NULL,
          title = if (m == "C-index") "Survival sub-model alone" else
            "Joint-model dynamic prediction (mean over landmarks 1, 3, 5; 2-year window)") +
     theme_bw()

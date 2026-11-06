@@ -2,3 +2,4 @@
 .RData
 *.Rcheck/
 *.tar.gz
+dev/sim/run.log
